@@ -2,11 +2,8 @@ package CalcolaArea;
 
 public class Rettangolo extends Forma{
 
-    private double base;
-    private double altezza;
-
     Rettangolo (double base, double altezza){
-        super(base, altezza);
+        super(base, altezza, Forme.rettangolo);
     }
 
     @Override

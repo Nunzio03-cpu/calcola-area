@@ -2,11 +2,8 @@ package CalcolaArea;
 
 public class Triangolo extends Forma{
 
-    private double base;
-    private double altezza;
-
     Triangolo (double base, double altezza){
-        super(base, altezza);
+        super(base, altezza, Forme.triangolo);
     }
 
     @Override

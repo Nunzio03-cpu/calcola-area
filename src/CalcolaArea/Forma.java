@@ -1,19 +1,23 @@
 package CalcolaArea;
 /*
-Esercizio classi astratte
-Scrivere un programma che contenga una classe astratta chiamata Forma ed un metodo astratto chiamato
-calcolaArea().
-Crea poi due sottoclassi Rettangolo e Triangolo che estendono Forma ed implementano il metodo per il
-calcolo dell'area in maniera specifica.
+Scrivere un programma che contenga una classe chiamata Forma ed un metodo chiamato calcolaArea() che
+stampi l'area della forma specifica.
+Crea poi due sottoclassi Triangolo e Rettangolo che estendono Forma e che abbiano un tipo che ne
+identifichi la Forma in maniera univoca usando una enum.
  */
-
+enum Forme{
+    rettangolo,
+    triangolo
+}
 public abstract class Forma {
-    private double base;
-    private double altezza;
+    protected double base;
+    protected double altezza;
+    private final Forme laMiaForma;
 
-    public Forma(double base, double altezza) {
+    public Forma(double base, double altezza, Forme laMiaForma) {
         this.base = base;
         this.altezza = altezza;
+        this.laMiaForma = laMiaForma;
     }
 
     public double getBase() {
@@ -30,6 +34,10 @@ public abstract class Forma {
 
     public void setAltezza(double altezza) {
         this.altezza = altezza;
+    }
+
+    public Forme getLaMiaForma() {
+        return laMiaForma;
     }
 
     public abstract void calcolaArea();
