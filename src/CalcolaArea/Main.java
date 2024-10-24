@@ -2,15 +2,11 @@ package CalcolaArea;
 
 public class Main {
     public static void main(String[] args) {
-        Forma rettangolo = new Rettangolo(3.3, 6.2);
-        Forma triangolo = new Triangolo(5.7, 8.5);
+        Rettangolo rettangolo1 = new Rettangolo(15.0, 3.5);
+        Triangolo triangolo1 = new Triangolo(8.0, 2.5);
 
-        System.out.println("La forma è: " +rettangolo.getLaMiaForma());
-        rettangolo.calcolaArea();
-
-        System.out.println("La forma è: " +triangolo.getLaMiaForma());
-        triangolo.calcolaArea();
-
-
+        rettangolo1.calcolaArea();
+        System.out.println();
+        triangolo1.calcolaArea();
     }
 }
